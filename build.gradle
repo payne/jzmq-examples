@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'jzmq-examples', 'Implementation-Version': 0.1
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.zeromq:jzmq:2.2.2'
+	compile 'log4j:log4j:1.2.17'
+	testCompile 'junit:junit:4.4'
+}
